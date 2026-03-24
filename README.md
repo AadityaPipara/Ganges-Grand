@@ -1,2 +1,0 @@
-# ganges-grand
-first project
