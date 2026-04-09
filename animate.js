@@ -20,12 +20,12 @@ if(isMobile && isRoomPage){
     });
 
     document.querySelectorAll('.card-container .card').forEach((card,index) => {
-        card.classList.remove('.slide-left', '.slide-right');
+        card.classList.remove('slide-left', 'slide-right');
         if(index%2 === 0){
-            card.classList.add('.slide-right')
+            card.classList.add('slide-left');
         }
         else{
-            card.classList.add('slide.left');
+            card.classList.add('slide-right');
         }
         cardObserver.observe(card);
     });
@@ -42,19 +42,13 @@ const sectionObserver = new IntersectionObserver((entries) => {
             entry.target.querySelectorAll('.pop').forEach(el => el.classList.add('animate'));
             entry.target.querySelectorAll('.fade-in').forEach(el => el.classList.add('animate'));
 
-            observer.unobserve(entry.target); // animate once per section
+            sectionObserver.unobserve(entry.target); // animate once per section
         }
     });
 }, { 
-    threshold: isRoomsSection() ? 0.15 : 0.25,
+    threshold: isRoomPage ? 0.15 : 0.25,
     rootMargin: "0px 150px 0px 150px"
 });
-
-function isRoomsSection(){
-    const isRoomPage = window.location.pathname.includes('room.html');
-    const hasCardContainer = document.querySelector('.card-container') !== null;
-    return isRoomPage && hasCardContainer;
-}
 
 // watches ALL sections that have data-animate-section attribute
 document.querySelectorAll('[data-animate-section]').forEach(section => {
