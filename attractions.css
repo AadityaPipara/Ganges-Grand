@@ -1,0 +1,286 @@
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .uptxt {
+    width: 80%;
+}
+
+.image-card .txt .uptxt p {
+    color: #ffc760;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .downtxt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+.image-card .txt .vertical-line {
+    width: 4px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+.container {
+    width: 85%;
+    height: auto;
+    /* display: flex; */
+    /* justify-content: center; */
+    margin: 0 auto;
+    gap: 50px;
+}
+
+.container .page #align{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #b18c57;
+    padding-bottom: 70px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+
+.container .page .left,
+.container .page .right {
+    width: 47%;
+}
+
+.container .page img{
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 1 / 0.75;
+    /* transform: translateY(30px); */
+    /* align-items: center; */
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.5);
+}
+
+.container .page #img{
+    display: flex;
+    align-items: center;
+}
+
+.container .heading{
+    text-align: center;
+    margin: 70px 0;
+}
+
+.container .heading h1{
+    color: #b18c57;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bolder;
+}
+
+.container .heading p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    width: 85%;
+    margin: 0 auto;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+.container .page h1{
+    /* color: #b18c57; */
+    font-size: 35px;
+    /* font-family: ; */
+    font-weight: 900;
+    text-transform: uppercase;
+    margin: 0;   
+    text-align: center;
+}
+
+.container .page #text p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin-top: 20px;
+    box-shadow: 3px 3px 10px #bd9d00;
+    padding: 20px;
+}
+
+.slide-left {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.slide-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.slide-in-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.fade-in.animate {
+    opacity: 1;
+}
+
+/* ==========================================
+   TABLET OPTIMIZATION (Screens under 1100px)
+   ========================================== */
+
+@media (max-width: 1100px) {
+    /* Fix Hero Image Text */
+    .image-card .txt {
+        padding: 0 50px;
+    }
+
+    /* Expand container to give text more room to breathe */
+    .container {
+        width: 95%;
+        gap: 30px;
+    }
+
+    .container .page #align {
+        gap: 20px; /* Reduce gap between image and text on medium screens */
+    }
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATION (Screens under 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Fix Hero Banner Text */
+    .image-card .txt {
+        padding: 0 20px;
+        bottom: 15px;
+    }
+
+    .image-card .txt .uptxt {
+        width: 100%;
+        opacity: 0;
+    }
+
+    .image-card .txt .uptxt p {
+        font-size: 13px;
+        line-height: 1.4;
+    }
+
+    .image-card .txt .left {
+        font-size: 24px;
+    }
+
+    .image-card .txt .right {
+        font-size: 16px;
+        gap: 5px;
+    }
+
+    .image-card .txt .vertical-line {
+        height: 18px;
+        margin-top: 22px;
+    }
+
+    /* 2. Fix Main Heading */
+    .container .heading {
+        margin: 40px 0;
+    }
+
+    .container .heading h1 {
+        font-size: 32px;
+    }
+
+    .container .heading p {
+        width: 100%; /* Let the intro text take full width */
+        font-size: 15px;
+    }
+
+    /* 3. Fix Attraction Sections (Stacking and Flipping) */
+    .container .page h1 {
+        font-size: 26px;
+    }
+
+    .container .page #align {
+        flex-direction: column; /* Stack image and text vertically */
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+    }
+
+    /* 🌟 THE MAGIC TRICK: Reverses the layout for the alternating pages so images are ALWAYS on top on mobile! */
+    .page.two #align, 
+    .page.four #align, 
+    .page.six #align, 
+    .page.eight #align {
+        flex-direction: column-reverse;
+    }
+
+    .container .page .left,
+    .container .page .right {
+        width: 100%; /* Elements take up full screen width */
+    }
+
+    /* 4. Fix Text Box Spacing */
+    .container .page #text p {
+        font-size: 15px;
+        padding: 15px;
+        margin-top: 15px; /* Adds a nice gap between the image and the text box */
+    }
+}

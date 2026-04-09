@@ -1,0 +1,168 @@
+.container{
+    padding: 10px 150px 20px 150px;
+}
+
+h1{
+    color: #6f4831;
+    font-size: 36px;
+}
+
+p{
+    font-size: 16px;
+    color: #010517;
+    font-family: 'Montserrat', sans-serif;
+}
+
+span{
+    font-weight: 600;
+    line-height: 1.4;
+    padding-left: 10px;
+    color: #010517;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ol li{
+    font-size: 17px;
+    color: #191919;
+    /* display: flex;
+    flex-direction: column;
+    gap: 2px; */
+    padding-bottom: 10px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    /* flex-direction: column; */
+    position: absolute;
+    justify-content: space-between;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .vertical-line {
+    width: 3px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+
+/* --- RESPONSIVE OPTIMIZATIONS FOR FAQ PAGE --- */
+
+/* 1. Tablet and Below (Common Breakpoint) */
+@media (max-width: 992px) {
+    .container {
+        padding: 20px 40px; /* Reduced side padding for tablets */
+    }
+
+    .image-card .txt {
+        padding: 0 40px;
+        bottom: 80px; /* Adjusted position to keep it visible */
+    }
+
+    .image-card .txt .left {
+        font-size: 35px; /* Scale down title */
+    }
+}
+
+/* 2. Mobile View (Phones) */
+@media (max-width: 768px) {
+    /* Reset massive desktop padding */
+    .container {
+        padding: 20px 15px; 
+    }
+
+    h1 {
+        font-size: 28px; /* Slightly smaller for mobile readability */
+    }
+
+    /* Hero section adjustments */
+    .image-card .txt {
+        padding: 0 15px;
+        bottom: 20px; /* Bring the text closer to the bottom on mobile */
+        /*flex-direction: column;  Stack text and breadcrumbs if necessary */
+        gap: 10px;
+    }
+
+    .image-card .txt .left {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .image-card .txt .right {
+        font-size: 16px; /* Smaller font for breadcrumbs */
+        gap: 5px;
+    }
+    
+    .image-card .txt .vertical-line {
+        height: 20px;
+        margin-top: 15px;
+    }
+
+    ol{
+        padding-inline-start: 20px;
+    }
+
+    /* Lists/FAQ readability */
+    ol li {
+        font-size: 15px; /* Comfortable mobile reading size */
+        padding-bottom: 15px;
+    }
+
+    /* Ensure specific spans don't get squashed */
+    span {
+        font-size: 16px;
+        padding-left: 0; /* Remove left padding to align with text */
+        display: block; /* Force the span to take its own line */
+        margin-bottom: 5px;
+    }
+}

@@ -1,0 +1,192 @@
+.container{
+    padding: 10px 150px 20px 150px;
+}
+
+h1{
+    color: #6f4831;
+    font-size: 38px;
+}
+
+p{
+    font-size: 15px;
+    color: #010517;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+span{
+    font-weight: 600;
+    line-height: 1.4;
+    padding-left: 10px;
+    color: #010517;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ol li{
+    font-size: 17px;
+    color: #191919;
+    /* display: flex;
+    flex-direction: column;
+    gap: 2px; */
+    padding-bottom: 10px;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .vertical-line {
+    width: 3px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.image img{
+    background-repeat: no-repeat;
+    width: 55%;
+    height: auto;
+}
+
+#image img{
+    width: 75%;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.fade-in.animate {
+    opacity: 1;
+}
+
+/* --- RESPONSIVE OPTIMIZATIONS FOR SCIENCE OF KASHI --- */
+
+/* 1. Tablet View (Portrait/Small Screens) */
+@media (max-width: 992px) {
+    .container {
+        padding: 20px 40px;
+    }
+
+    .image-card .txt {
+        padding: 0 40px;
+        bottom: 50px;
+    }
+}
+
+/* 2. Mobile View (Phones) */
+@media (max-width: 600px) {
+    /* Reset main layout padding */
+    .container {
+        padding: 20px 15px;
+    }
+
+    /* Hero Banner Scaling */
+    .image-card .txt {
+        padding: 0 15px;
+        bottom: 15px;
+        flex-direction: column; /* Stack if needed */
+        align-items: flex-start;
+    }
+
+    .image-card .txt .left {
+        font-size: 24px;
+        font-weight: 600;
+    }
+
+    .image-card .txt .right {
+        font-size: 14px;
+        gap: 5px;
+    }
+
+    .image-card .txt .vertical-line {
+        height: 18px;
+        margin-top: 15px;
+    }
+
+    /* Image Adjustments - Making them look good on small screens */
+    .image img {
+        width: 90% !important; /* Forces images to take up nice space on phones */
+    }
+
+    #image img {
+        width: 95% !important;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    /* Typography adjustments */
+    h1 {
+        font-size: 28px;
+    }
+
+    p {
+        font-size: 15px;
+        line-height: 1.6; /* Better line height for mobile reading */
+    }
+}
