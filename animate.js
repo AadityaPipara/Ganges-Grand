@@ -1,4 +1,37 @@
-const observer = new IntersectionObserver((entries) => {
+const isMobile = window.innerWidth <= 768;
+const isRoomPage = window.location.pathname.includes('room.html') && document.querySelector('.card-container') !== null;
+
+if(isMobile && isRoomPage){
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                const card = entry.target;
+                if(card.classList.contains('slide-left')){
+                    card.classList.add('slide-in-left');
+                }
+                else{
+                    card.classList.add('slide-in-right');
+                }
+                cardObserver.unobserve(card);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    document.querySelectorAll('.card-container .card').forEach((card,index) => {
+        card.classList.remove('.slide-left', '.slide-right');
+        if(index%2 === 0){
+            card.classList.add('.slide-right')
+        }
+        else{
+            card.classList.add('slide.left');
+        }
+        cardObserver.observe(card);
+    });
+}
+
+const sectionObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
 
@@ -25,5 +58,6 @@ function isRoomsSection(){
 
 // watches ALL sections that have data-animate-section attribute
 document.querySelectorAll('[data-animate-section]').forEach(section => {
-    observer.observe(section);
+    if(isMobile && isRoomPage && section.closest('.card-container')) return;
+    sectionObserver.observe(section);
 });
