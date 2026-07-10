@@ -1,0 +1,296 @@
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .uptxt {
+    width: 80%;
+}
+
+.image-card .txt .uptxt p {
+    color: #ffc760;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .downtxt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .vertical-line {
+    width: 3px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+body{
+    background-color: rgb(248,245,240);
+}
+
+.page {
+    width: 85%;
+    margin: 70px auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page h1{
+    font-size: 40px;
+    color: #000000;
+    font-family: 'Cherry Swash', cursive;
+    font-weight: 550;
+}
+
+.page h1 .highlight{
+    border-bottom: 2px solid black;
+    padding-bottom: 7px;
+}
+
+.page h1 .circle{
+    position: relative;
+}
+
+.page h1 .circle::after{
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.page p{
+    margin: 45px 0;
+    line-height: 1.6;
+    color: #3a3232;
+    letter-spacing: 1px;
+    width: 60%;
+}
+
+.page .card-container .row{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.page .card-container{
+    margin-bottom: 100px;
+}
+
+.page .card-container .row .card{
+    border: 1px solid rgb(238,222,199);
+    width: 32%;
+    transition: all 0.3s ease-in-out;
+    background-color: #f0ecd8;
+    border-radius: 10px;
+}
+
+.page .card-container .row .card:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px #bd9d00;
+}
+
+.page .card-container .row .card h1{
+    color: rgb(34,34,34);
+    font-size: 24px;
+    font-weight: 400;
+    padding: 0 20px 10px 20px;
+    font-family: "Times New Roman", sans-serif;
+    word-break: normal;
+    /* word-break: break-all; */
+}
+
+.page .icon{
+    font-size: 35px;
+    color: rgb(151,113,63);
+    font-weight: 900;
+    margin-bottom: 20px;
+    padding: 30px 20px 0 20px;
+}
+
+/* Initial state - hidden/small */
+.pop {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 3s ease-in-out, opacity 2.5s ease-in-out;
+}
+
+/* Animated state */
+.pop.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.slide-left {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.slide-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.slide-in-left {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.slide-in-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ==========================================
+   TABLET OPTIMIZATION (Screens under 1100px)
+   ========================================== */
+@media (max-width: 1100px) {
+    /* Fix Hero Image Text */
+    .image-card .txt {
+        padding: 0 50px;
+    }
+
+    .page {
+        width: 90%;
+    }
+
+    /* Let the paragraph take up more space on tablets */
+    .page p {
+        width: 85%;
+    }
+
+    /* Make cards wrap nicely (2 per row instead of 3) */
+    .page .card-container .row .card {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATION (Screens under 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Fix Hero Banner Text */
+    .image-card .txt {
+        padding: 0 20px;
+        bottom: 15px; /* Push text up so it stays on the image */
+    }
+
+    .image-card .txt .uptxt {
+        width: 100%;
+        opacity: 0;
+    }
+
+    .image-card .txt .uptxt p {
+        font-size: 13px; /* Smaller text for phone */
+        line-height: 1.4;
+    }
+
+    .image-card .txt .left {
+        font-size: 24px; /* Reduced from 50px */
+    }
+
+    .image-card .txt .right {
+        font-size: 16px;
+        gap: 5px;
+    }
+
+    .image-card .txt .vertical-line {
+        height: 18px;
+        margin-top: 22px;
+    }
+
+    /* 2. Fix Page Title and Intro Paragraph */
+    .page h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .page p {
+        width: 100%;
+        font-size: 15px;
+        text-align: center; /* Centering text looks much better on mobile */
+        margin: 25px 0;
+    }
+
+    /* 3. Fix Amenities Grid (Stack them vertically) */
+    .page .card-container .row {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 15px; /* Space between the rows */
+    }
+
+    .page .card-container .row .card {
+        width: 100%; /* Makes cards stretch across the whole phone screen */
+        margin-bottom: 0;
+        text-align: center; /* Center the icons and text inside the card */
+    }
+    
+    .page .icon {
+        padding-top: 20px;
+        font-size: 30px; /* Slightly smaller icons for mobile */
+    }
+
+    .page .card-container .row .card h1 {
+        font-size: 20px;
+        padding-bottom: 20px;
+    }
+}

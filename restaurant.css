@@ -1,0 +1,550 @@
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .uptxt {
+    width: 80%;
+}
+
+.image-card .txt .uptxt p {
+    color: #ffc760;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .downtxt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+.image-card .txt .vertical-line {
+    width: 4px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+.bookenq {
+    width: 65%;
+    /* height: 400px; */
+    background-color: #f8f5f0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    /* margin-top: 80px; */
+    border-radius: 20px;
+    margin: 80px auto 80px auto;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.bookenq .left {
+    /* font-width: 0 0 60%; */
+    width: 50%;
+    max-width: 50%;
+    padding-left: 50px;
+}
+
+.bookenq .right {
+    /* position: absolute;
+    right: 0;
+    top: 19%; */
+    background-color: #fff;
+    height: 70%;
+    /* width: 33%; */
+    flex: 0 0 33%;
+    max-width: 33%;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    align-self: center;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.bookenq .left,
+.bookenq .right {
+    flex: 1 1 300px;
+    /* grow, shrink, minimum width */
+}
+
+.bookenq .right .information {
+    display: flex;
+    flex-direction: column;
+}
+
+.bookenq .right .information .contact,
+.bookenq .right .information .mails,
+.bookenq .right .information .location {
+    display: flex;
+    gap: 15px;
+}
+
+.bookenq .right .information .icons {
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+}
+
+.bookenq .right .number,
+.bookenq .right .mailto,
+.bookenq .right .address {
+    font-size: 14px;
+    color: rgb(86, 84, 84);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    line-height: 1.2;
+    display: flex;
+    /* flex-wrap: wrap; */
+    word-break: break-word;
+}
+
+.bookenq .right .number p {
+    margin-top: 0;
+}
+
+.bookenq .right h2 {
+    padding-left: 25px;
+    padding-top: 10px;
+    color: #806e6e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+}
+
+.bookenq .left h1 {
+    padding-top: 40px;
+    padding-left: 0px;
+    margin: 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 550;
+    font-size: 30px;
+}
+
+.bookenq .left p {
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #3a3232;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.bookenq .left .col {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    gap: 12px;
+}
+
+.message{
+    width: 100%;
+    height: 100px;
+}
+
+textarea{
+    padding: 10px;
+    color: #191919;
+    font-size: 16px;
+    /* font-family: 'Montserrat', sans-serif; */
+}
+
+.arrival,
+.departure,
+.number,
+.email,
+.name {
+    width: 100%;
+    height: 35px;
+}
+
+.arrival::placeholder,
+.departure::placeholder,
+.name::placeholder,
+.number::placeholder,
+.email::placeholder,
+.adults::placeholder {
+    /* padding-left: 10px; */
+    color: #000;
+}
+
+select {
+    padding-left: 5px;
+    color: #000;
+}
+
+input {
+    padding-left: 10px;
+    color: #000;
+}
+
+.bookenq #col-two {
+    display: flex;
+    justify-content: space-between;
+    /* gap: 20px; */
+}
+
+.bookenq .left .name {
+    width: 47%;
+    height: 35px;
+}
+
+.bookenq .people {
+    width: 47%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adults,
+.children {
+    width: 40%;
+    height: 35px;
+}
+
+.submit {
+    margin-top: 30px;
+    width: 100%;
+    height: 40px;
+    background-color: #b18c57;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.submit:hover {
+    background-color: #000;
+    color: #bd9d00;
+    transition: all 0.3s ease-in-out;
+}
+
+.page {
+    width: 85%;
+    margin: 0 auto;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.page.one {
+    margin-top: 90px;
+}
+
+.page.one h3 {
+    font-size: 30px;
+    color: #a38426;
+    font-weight: 600;
+}
+
+.page.one h1,
+.page.two h1 {
+    font-size: 40px;
+    color: #000000;
+    font-family: 'Cherry Swash', cursive;
+    font-weight: 550;
+}
+
+.page.one h1 .highlight,
+.page.two h1 .highlight {
+    border-bottom: 2px solid black;
+    padding-bottom: 7px;
+}
+
+.page.one h1 .circle,
+.page.two h1 .circle {
+    position: relative;
+}
+
+.page.one h1 .circle::after,
+.page.two h1 .circle::after {
+    content: " ";
+    position: absolute;
+    left: 50%;
+    bottom: -15px;
+    transform: translateX(-50%);
+    width: 12px;
+    height: 12px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.page p {
+    margin-top: 45px;
+    line-height: 1.8;
+    color: #3a3232;
+    letter-spacing: 1px;
+}
+
+.page.two {
+    margin-top: 50px;
+}
+
+.page.three h4 {
+    font-size: 22px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.food-container{
+    box-shadow: 3px 3px 20px #a38426;
+}
+
+#tabBar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 15px;
+    background: #f0f0f0;
+    margin-bottom: 0;
+}
+
+.tab-btn {
+    background: #8B4513;
+    color: #f5deb3;
+    border: none;
+    padding: 10px 14px;
+    cursor: pointer;
+    font-size: 16px;
+    width: max-content;
+    list-style: none;
+    letter-spacing: 0.5px;
+    font-weight: bold;
+}
+
+.tab-btn.active {
+    background: #1a2340;
+    color: #fff;
+}
+
+.tab-content {
+    display: none;
+    padding: 0 16px 5px 16px;
+    margin-top: 0;
+}
+
+.tab-content ul li{
+    list-style-type: disc;
+    border-bottom: 1px solid #c0bebe;
+    padding: 13px 0;
+    font-size: 17px;  
+    letter-spacing: 0.6px; 
+    /* font-weight: bold;  */
+}
+
+.tab-content li::marker{
+    color: #a56a16;
+    font-size: 20px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.tab-btn i {
+    margin-right: 8px;
+}
+
+.tab-content ul{
+    padding-inline-start: 20px;
+    /* border-top: 1px solid #c0bebe; */
+}
+
+/* Initial state - hidden/small */
+.pop {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 2.5s cubic-bezier(0.34, 1.56, 0.64, 1), opacity 2s ease;
+}
+
+/* Animated state */
+.pop.animate {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.slide-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition: transform 1.2s ease, opacity 1.2s ease;
+}
+
+.slide-in-right {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+/* ==========================================
+   TABLET OPTIMIZATION (Screens under 1100px)
+   ========================================== */
+@media (max-width: 1100px) {
+    /* Fix Hero Image Text */
+    .image-card .txt {
+        padding: 0 50px;
+    }
+
+    /* Give the main text content a bit more room */
+    .page {
+        width: 90%;
+    }
+
+    /* Make Booking Form fit */
+    .bookenq {
+        width: 90%;
+    }
+}
+
+/* ==========================================
+   MOBILE OPTIMIZATION (Screens under 768px)
+   ========================================== */
+@media (max-width: 768px) {
+    /* 1. Fix Hero Banner Text */
+    .image-card .txt {
+        padding: 0 20px;
+        bottom: 15px; /* Push text up so it stays on the image */
+    }
+
+    .image-card .txt .uptxt {
+        width: 100%;
+        opacity: 0;
+    }
+
+    .image-card .txt .uptxt p {
+        font-size: 13px; /* Smaller text for phone */
+        line-height: 1.4;
+    }
+
+    .image-card .txt .left {
+        font-size: 24px; /* Reduced from 50px */
+    }
+
+    .image-card .txt .right {
+        font-size: 16px;
+        gap: 5px;
+    }
+
+    .image-card .txt .vertical-line {
+        height: 18px;
+        margin-top: 22px;
+    }
+
+    /* 2. Fix Page Text (Headings & Paragraphs) */
+    .page.one h1, .page.two h1 {
+        font-size: 28px; /* Shrink large headings for mobile */
+    }
+
+    .page.one h3 {
+        font-size: 20px;
+    }
+
+    .page p {
+        margin-top: 25px;
+        font-size: 15px; /* Slightly smaller for easier phone reading */
+        line-height: 1.6;
+    }
+
+    /* 3. Fix Restaurant Menu Tabs */
+    #tabBar {
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+    }
+
+    .tab-btn {
+        font-size: 14px;
+        padding: 8px 12px;
+        flex-grow: 1; /* Makes buttons stretch to fill empty space evenly */
+        text-align: center;
+        justify-content: center;
+    }
+
+    .tab-content ul li {
+        font-size: 15px; /* Adjust menu item text size */
+    }
+
+    /* 4. Fix Booking Form (Exact same smooth layout as other pages) */
+    .bookenq {
+        width: 90%;
+        flex-direction: column;
+        margin: 40px auto;
+    }
+
+    .bookenq .left {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .bookenq .right {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 0 0 20px 20px;
+    }
+
+    .bookenq .left .col {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bookenq #col-two {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bookenq .left .name, .bookenq .people {
+        width: 100%;
+    }
+
+    .adults, .children {
+        width: 48%;
+    }
+}

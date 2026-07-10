@@ -1,0 +1,405 @@
+.image-card {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.image-card img {
+    background-repeat: no-repeat;
+    width: 100%;
+    /* display: block; */
+}
+
+.image-card .txt {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 40px;
+    /* justify-content: space-between; */
+    padding: 0 150px;
+}
+
+.image-card .txt .uptxt {
+    width: 80%;
+}
+
+.image-card .txt .uptxt p {
+    color: #ffc760;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.image-card .txt .downtxt {
+    display: flex;
+    justify-content: space-between;
+}
+
+.image-card .txt .left {
+    color: white;
+    /* font-style: italic; */
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .right {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+}
+
+.image-card .txt .vertical-line {
+    width: 3px;
+    height: 25px;
+    background-color: #bd9d00;
+    margin-top: 28px;
+}
+
+.image-card .txt .right a {
+    text-decoration: none;
+}
+
+.image-card .txt .right h3 {
+    font-style: italic;
+    color: pink;
+    transition: 0.15s ease-in-out;
+}
+
+.image-card .txt .right h3:hover {
+    color: rgb(255, 0, 43);
+    transform: scale(1.05);
+}
+
+.page.one {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.page .left {
+    width: 47%;
+}
+
+.page .right {
+    width: 41%;
+}
+
+.page .left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.page .left .up{
+    width: 55%;
+}
+
+.page .left .down{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.page .left .down .col{
+    display: flex;
+    gap: 25px;
+}
+
+.page .down .col h3{
+    margin-top: 0;
+}
+
+.page .down .col i{
+    font-size: 30px;
+    color: #bd9d00;
+}
+
+.page .down .col .icon{
+    display: flex;
+    align-items: center;
+}
+
+.page .down .col p{
+    margin-bottom: 0;
+}
+
+.page .up h3{
+    color: #191919;
+    font-size: 20px;
+    margin-bottom: 0;
+}
+
+.page .up h1{
+    color: #191919;
+    margin-top: 5px;
+    font-family: 'Cherry Swash', cursive;
+    font-size: 40px;
+}
+
+.page .up p{
+    color: #010517;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+.page .down .col .txt h3{
+    color: #191919;
+    font-size: 18px;
+    margin-bottom: 0;
+}
+
+.page .down .col .txt p{
+    color: #191919;
+    font-size: 17px;
+    margin-top: 10px;
+}
+
+.page .right h1{
+    color: #b18c57;
+    /* margin-bottom: 0; */
+    /* font-family: 'Cherry Swash', cursive; */
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.page .right .col{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.page .right .col .arrival, .page .right .col .departure, .page .right .name, .page .right .email{
+    width: 47%;
+    height: 35px;
+}
+
+.page .right .col .arrival, .page .right .col .departure, .page .right .name, .page .right .email{
+    border: 1px solid #191919;
+    padding: 0 10px;
+}
+
+.page .right .answer{
+    width: 100%;
+    height: 50px;
+    border: 1px solid #191919;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    color: #191919;
+}
+
+.page .right .col .arrival::placeholder, .page .right .col .departure::placeholder, .page .right .name::placeholder, .page .right .email::placeholder, .page .right .answer::placeholder{
+    /* outline: none; */
+    color: #000;
+}
+
+.page .right .col.two .people{
+    display: flex;
+    justify-content: space-between;
+    width: 47%;
+}
+
+.page .right .col.two .people .adults, .page .right .col.two .people .children{
+    width: 40%;
+    height: 35px;
+    /* border: 1px solid #191919; */
+    padding: 0 8px;
+}
+
+.page .right .col.two .contact{
+    width: 47%;
+    display: flex;
+    height: 35px;
+    gap: 5px;  
+}
+
+.page .col.two .contact .number{
+    border: 1px solid #191919;
+    width: 100%;
+    padding-left: 10px;
+}
+
+.page .col.two .contact .number::placeholder{
+    color: #000;
+}
+
+.page .col span{
+    color: red;
+}
+
+.page .right .col.two .contact .number:focus, .page .right .adults:focus, .page .right .col .children:focus, .page .right .col .arrival:focus, .page .right .col .departure:focus, .page .right .col .name:focus, .page .right .col .email:focus, .page .right .answer:focus{
+    outline: none;
+    border-color: #bd9d00;
+    box-shadow: 0 0 5px #b18c57;
+}
+
+.page .right .namediv, .page .right .emaildiv{
+    display: flex;
+    gap: 5px;
+    width: 47%;
+}
+
+.page .right .namediv .name, .page .right .emaildiv .email{
+    width: 100%;
+    height: 35px;
+    border: 1px solid #191919;
+    padding: 0 10px;
+}
+
+.submit{
+    margin-top: 10px;
+    width: 100%;
+    height: 40px;
+    background-color: #b18c57;
+    color: white;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 50px;
+}
+
+.submit:hover{
+    background-color: #000;
+    color: #bd9d00;
+    transition: all 0.3s ease-in-out;
+}
+
+.page.two{
+    width: 100%;
+    background-color: rgb(248, 245, 240);
+    /* box-shadow: 0 0 10px #bd9d00; */
+    margin-top: 50px;
+}
+
+.page.two .map-container{
+    width: 85%;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.page.two .map-container #map{
+    border: 2px solid #191919;
+    border-radius: 5px;
+    width: 100%;
+    height: 450px;
+}
+
+/* --- RESPONSIVE OPTIMIZATIONS --- */
+
+/* 1. Tablet View (Portrait/Small Screens) */
+@media (max-width: 992px) {
+    .page.one {
+        width: 90%; /* Give it more breathing room */
+        gap: 40px;
+    }
+    
+    .page .left, .page .right {
+        width: 100%; /* Stack the sections */
+    }
+
+    /* Reduce Hero text padding */
+    .image-card .txt {
+        padding: 0 40px;
+        bottom: 20px;
+    }
+    
+    .image-card .txt .left {
+        font-size: 35px; /* Scale down hero text */
+    }
+}
+
+/* 2. Mobile View (Phones) */
+@media (max-width: 768px) {
+    /* Hero Section Fixes */
+    .image-card .txt {
+        padding: 0 20px;
+        bottom: 10px;
+    }
+    .image-card .txt .left {
+        font-size: 24px;
+    }
+    .image-card .txt .uptxt p {
+        font-size: 14px;
+        opacity: 0;
+    }
+    .image-card .txt .right {
+        font-size: 16px;
+        gap: 5px;
+    }
+
+    .image-card .txt .right .vertical-line{
+        margin-top: 15px;
+    }
+
+    /* Page Content Stack */
+    .page.one {
+        margin-top: 40px;
+    }
+    
+    .page .left .up{
+        width: 100%;
+    }
+
+    .page .up h1 {
+        font-size: 28px; /* Smaller header for mobile */
+    }
+
+    /* Fix Form Layouts */
+    .page .right .col {
+        flex-direction: column; /* Stack all inputs vertically */
+        gap: 15px;
+    }
+    
+    .page .right .col .arrival, 
+    .page .right .col .departure, 
+    .page .right .name, 
+    .page .right .email,
+    .page .right .col.two .people,
+    .page .right .col.two .contact {
+        width: 100% !important; /* Force full width on mobile */
+    }
+
+    /* Adjust the Adults/Children and Contact row */
+    .page .right .col.two .people .adults, 
+    .page .right .col.two .people .children {
+        width: 48%; /* Keep these two side-by-side even on mobile */
+    }
+
+    .page .right .namediv, .page .right .emaildiv {
+        width: 100%; /* Ensure these stack correctly */
+    }
+
+    .page .down .col.two{
+        width: 100%;
+    }
+
+    .page .down .col .txt p{
+        width: 100%;
+        overflow-wrap: break-word;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /* Text areas and Buttons */
+    .submit {
+        height: 50px; /* Bigger target for thumbs */
+        font-size: 16px;
+    }
+
+    /* Map container */
+    .page.two .map-container #map {
+        height: 300px; /* Reduce map height on mobile */
+    }
+}
